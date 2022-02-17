@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<E-Document>
+	<Header>
+		<DateIssued>2019-12-18</DateIssued><!-- Send date -->
+	</Header>
+	<Document>
+		<DocumentType>order</DocumentType>
+		<DocumentParties>
+			<BuyerParty>
+				<PartyCode>CUSTNO</PartyCode><!-- Customer Number -->
+				<Name>BUYER COMPANY LTD</Name><!-- Custome Name -->
+				<RegNum>10009681</RegNum><!-- Customer Reg. No Not mandatory -->
+				<VATRegNum>EE100009681</VATRegNum><!-- Customer VAT Reg. No Not mandatory -->
+				<ContactData><!-- Not mandatory if customer is previously known in our system -->
+					<ActualAddress>
+						<Address1>Address 1</Address1>
+						<Address2>Address 2</Address2>
+						<City>City</City>
+						<PostalCode>11111</PostalCode>
+						<County>County</County>
+						<CountryCode>EE</CountryCode>
+					</ActualAddress>
+				</ContactData>
+			</BuyerParty>
+			<DeliveryParty>
+				<PartyCode>DELCODE</PartyCode><!-- Delivery customer No -->
+				<Name>BUYER COMPANY - shop 1</Name><!-- Delivery customer Name -->
+				<ContactData><!-- Not mandatory if customer is previously known in our system -->
+					<ActualAddress>
+						<Address1>Aadress 1</Address1>
+						<Address2>Aadress 2</Address2><!-- Mittekohustuslik -->
+						<City>Linn</City>
+						<PostalCode>11111</PostalCode>
+						<County>Maakond</County><!-- Mittekohustuslik -->
+						<CountryCode>EE</CountryCode>
+					</ActualAddress>
+				</ContactData>
+			</DeliveryParty>
+		</DocumentParties>
+		<DocumentInfo>
+			<DocumentNum>2509821</DocumentNum><!-- Your Order No -->
+			<DateInfo>
+				<OrderDate>2019-12-18</OrderDate><!-- Your Order Date -->
+				<DeliveryDateRequested>2019-12-25</DeliveryDateRequested>  <!-- Requested delivery date -->
+			</DateInfo>
+			<CreatedByContact><!-- Your contact info -->
+				<ContactFirstName>Martin Laast</ContactFirstName>
+				<PhoneNum>+372 6205168</PhoneNum>
+				<EmailAddress>martin.laast@email.com</EmailAddress>
+			</CreatedByContact>
+		</DocumentInfo>
+		<DocumentItem>
+			<ItemEntry>
+				<LineItemNum>10</LineItemNum>
+				<GTIN>1234567890123</GTIN><!-- Article EAN No -->
+				<SellerItemCode>110028</SellerItemCode><!-- Article No in our system  -->
+				<BuyerItemCode>zd100152</BuyerItemCode><!-- Article No in your system -->
+				<ItemDescription>Senna tugitool</ItemDescription><!-- Article name -->
+				<BaseUnit>PCS</BaseUnit>
+				<AmountOrdered>1</AmountOrdered>
+				<DateInfo>
+					<DeliveryDateRequested>2019-12-28</DeliveryDateRequested><!-- Delivery date if different from order's delivery date -->
+				</DateInfo>
+				<CustomerRef>Kovrigina/lep.1112669</CustomerRef><!-- Additional reference. Not mandatory -->
+			</ItemEntry>
+			<ItemEntry>
+				<LineItemNum>20</LineItemNum>
+				<GTIN>1234567890123</GTIN>
+				<SellerItemCode>100060</SellerItemCode>
+				<BuyerItemCode>zd100157</BuyerItemCode>
+				<ItemDescription>Senna järi</ItemDescription>
+				<BaseUnit>PCS</BaseUnit>
+				<AmountOrdered>2</AmountOrdered>
+				<CustomerRef>Kovrigina/lep.1112669</CustomerRef>
+			</ItemEntry>
+		</DocumentItem>
+		<AdditionalInfo><!-- Additional info. Not mandatory -->
+			<Extension extensionId="remarks">
+				<InfoContent>Free text on order</InfoContent>
+			</Extension>
+		</AdditionalInfo>
+	</Document>
+</E-Document>

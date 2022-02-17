@@ -1,0 +1,31 @@
+database:
+  name: "Order Database"
+  url: http://127.0.0.1:5984/test-db
+  credentials: [testuser, testpassword]
+orderManager:
+  name: "Order Manager"
+  url: https://127.0.0.1:8081
+  credentials: [ordman, ordmanx]
+suppliersManager:
+  name: "Suppliers Manager"
+  url: https://127.0.0.1:8082
+  credentials: [supman, supmanx]
+deliverersManager:
+  name: "Deliverers Manager"
+  url: https://127.0.0.1:8083
+  credentials: [devman, devmanx]
+supplierAdapters:
+  - supplier: TestSupplier
+    url: https://127.0.0.1:8085
+    credentials: [testsa, testsax]
+  - supplier: Rave
+    url: https://127.0.0.1:8086
+    credentials: [supp1, supp1x]
+deliveryContact: 
+  name: DeliveryTest
+  phoneNum: "12345"
+  emailAddress: delivery@testnet.com
+adminContact:
+  name: AdminTest
+  phoneNum: "67890"
+  emailAddress: admin@testnet.com

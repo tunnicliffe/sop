@@ -1,0 +1,107 @@
+name:                sop
+version:             0.1.0.0
+github:              "tunnicliffe/sop"
+license:             BSD3
+author:              "Alex Tunnicliffe"
+maintainer:          "alex@tunnicliffe.com"
+copyright:           "2022 Alex Tunnicliffe"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            Web
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on GitHub at <https://github.com/tunnicliffe/sop#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+
+library:
+  source-dirs: src
+  dependencies:
+    - servant
+    - servant-server
+    - servant-client
+    - warp
+    - aeson
+    - bytestring
+    - unordered-containers
+    - text
+    - time
+    - mtl
+    - exceptions
+    - http-client
+    - yaml
+    - http-types
+    - utf8-string
+    - case-insensitive
+    - semigroupoids
+    - servant-client-core
+    - servant-xml
+    - xmlbf
+    - memory
+    - hashable
+    - http-media
+    - binary
+    - warp-tls
+    - http-client-tls
+    - wai
+
+executables:
+  all-components:
+    main:                Main.hs
+    source-dirs:         all-components
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - sop
+    - directory
+  xml-parse-test:
+    main:                Main.hs
+    source-dirs:         xml-parse-test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - sop
+    - bytestring
+    - xmlbf-xeno
+    - xmlbf-xmlhtml
+    - xmlbf
+
+tests:
+  sop-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - sop
+    - mtl
+    - servant
+    - QuickCheck
+    - free
+    - http-client
+    - servant-client
+    - servant-client-core
+    - aeson
+    - process
+    - time
+    - http-client-tls
+    - connection
+    - binary
+    - unordered-containers
+    - hashable
+    - directory
+    - async
